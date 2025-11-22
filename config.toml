@@ -1,3 +1,8 @@
+permissions:
+  contents: write   # 允许推送仓库内容
+  pages: write      # 如果是 GitHub Pages 部署的话
+  id-token: write   # 如果用到 OIDC（可选）
+  
 site_title = "MyArxiv"
 limit_days = 7
 cache_url = "https://zanghuise.github.io/MyArxiv/cache.json"
