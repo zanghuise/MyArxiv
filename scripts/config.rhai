@@ -3,7 +3,7 @@ let titles_model = ["RL", "Diffsion", "Transformer"];
 let titles_method = ["RL", "offline"];
 let titles =  titles_model + titles_method + titles_type;
 let authors_array = ["Auke Ijspeert", "MARCO HUTTER", "Junzhi Yu"];
-
+11
 let conferences = [
     // AI
     "AAAI", "AAMAS", "ACM MM", "AISTATS", "ALT", "CEC", "ECAI", "FUZZ IEEE", "GECCO", "ICANN", "ICAPS", "ICCBR", "ICONIP", "ICRA", "ICTAI", "IJCAI", "IJCNN", "IROS", "KR", "KSEM", "SIGGRAPH", "STOC", "UAI", "PPSN", "PRICAI", "TAAI",
