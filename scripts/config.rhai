@@ -1,4 +1,4 @@
-let titles_type = ["Salamandra", "Locomotion", "Legged", "Quadruped", "Gaits", "Underwater"];
+let titles_type = ["Salamander", "Locomotion", "Legged", "Quadruped", "Gaits", "Underwater", "spine", "limb"];
 let titles_model = ["RL", "Diffsion", "Transformer"];
 let titles_method = ["RL", "offline", "Unsupervised"];
 let titles =  titles_model + titles_method + titles_type;
