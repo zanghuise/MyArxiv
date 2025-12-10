@@ -1,6 +1,6 @@
 let titles_type = ["Salamander", "Locomotion", "Legged", "Quadruped", "Gaits", "Underwater", "spine", "limb"];
 let titles_model = ["RL", "Diffsion", "Transformer"];
-let titles_method = ["RL", "offline", "Unsupervised"];
+let titles_method = ["RL", "offline", "Unsupervised", "Multi-Objective"];
 let titles =  titles_model + titles_method + titles_type;
 let authors_array = ["Auke Ijspeert", "MARCO HUTTER", "Junzhi Yu"];
 
