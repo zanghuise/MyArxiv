@@ -45,7 +45,24 @@ jobs:
           tar -zxvf arxivfeed.tgz --strip-components 1 $(tar tf arxivfeed.tgz | grep /arxivfeed)
           chmod +x arxivfeed
       - name: Build rss
-        run: ./arxivfeed
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            output="$(./arxivfeed 2>&1)" && {
+              echo "$output"
+              break
+            }
+
+            echo "$output"
+            if echo "$output" | grep -q "Unexpected characters outside the root element" && [ "$attempt" -lt 3 ]; then
+              echo "arxivfeed returned malformed XML response, retrying in 30s (attempt ${attempt}/3)..."
+              sleep 30
+              continue
+            fi
+
+            echo "arxivfeed failed on attempt ${attempt}/3."
+            exit 1
+          done
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
